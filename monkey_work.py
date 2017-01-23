@@ -5,11 +5,22 @@ import openpyxl
 #have to install requests package using pip
 import requests
 #have to pip install --upgrade watson-developer-cloud
-
+from watson_developer_cloud import PersonalityInsightsV3
 
 #--------------------------------------------------------------
 #using Watson service to generate a json object which is to be used later to fill in the spreadsheet
-
+##personality_insights = PersonalityInsightsV3(
+##   version='2016-12-15',
+##   username='ed46916e-0566-45d6-8f8b-830d60fc6a42',
+##   password='D13MUx1G1tLF',
+##   #x-watson-learning-opt-out=True
+## )
+##with open(join(dirname(__file__), './profile.json')) as profile_json:
+##   profile = personality_insights.profile(
+##     profile_json.read(), content_type='application/json',
+##     raw_scores=True, consumption_preferences=True)
+##  
+##print(json.dumps(profile, indent=2))
 #----------------------------------------------------------------------------------------------
 json_data=json.dumps(json.loads("""{
   "word_count": 2653,
@@ -696,5 +707,5 @@ for row in ws['K1:BJ1']:
 			ws[index]=-1
 
 
-#wb.save(filename='Watson-data.xlsx')
+wb.save(filename='Watson-data.xlsx')
 
