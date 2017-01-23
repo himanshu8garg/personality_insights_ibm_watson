@@ -70,11 +70,12 @@ for i in range (0,len(personality)):
 	print personality[i]
 for row in ws['K1:BJ1']:
 	for cell in row:
- 		if cell.value not in personality:
+		if cell.value not in personality:
 			print "----------------------------------------"
 			print cell.value
 			index=str(cell.column)+str(row_x)
 			ws[index]=-1
 
 
-#wb.save(filename='Watson-data.xlsx')
+wb.save(filename='Watson-data.xlsx')
+
