@@ -34,16 +34,16 @@ personality=[]
 percentile=[]
 for eachpersonality in parsed_json['personality']:
 	personality.append(eachpersonality['name'])
-	percentile.append((eachpersonality['percentile']*100))
+	percentile.append(round((eachpersonality['percentile']*100),0))
 	for eachsubpersonality in eachpersonality['children']:
 		personality.append(eachsubpersonality['name'])
-		percentile.append((eachsubpersonality['percentile']*100))
+		percentile.append(round((eachsubpersonality['percentile']*100),0))
 for eachpersonality in parsed_json['needs']:
 	personality.append(eachpersonality['name'])
-	percentile.append((eachpersonality['percentile']*100))
+	percentile.append(round((eachpersonality['percentile']*100),0))
 for eachpersonality in parsed_json['values']:
 		personality.append(eachpersonality['name'])
-		percentile.append((eachpersonality['percentile']*100))
+		percentile.append(round((eachpersonality['percentile']*100),0))
 
 #print parsed_json['word_count']
 
