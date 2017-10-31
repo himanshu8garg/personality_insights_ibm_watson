@@ -11,8 +11,8 @@ from watson_developer_cloud import PersonalityInsightsV3
 #using Watson service to generate a json object which is to be used later to fill in the spreadsheet
 personality_insights = PersonalityInsightsV3(
    version='2016-12-15',
-   username='ed46916e-0566-45d6-8f8b-830d60fc6a42',
-   password='D13MUx1G1tLF',
+   username='',
+   password='',
    #x-watson-learning-opt-out=True
  )
 with open('./profile.json') as profile_json:
